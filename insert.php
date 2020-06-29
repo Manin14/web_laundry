@@ -7,7 +7,11 @@ $query = "INSERT INTO transaksi VALUES ('','$_POST[nama]','$_POST[no_telp]','$_P
 $data = $db->prepare($query);
 
 // lalu eksekusi
-$data->execute();
+$execute = $data->execute();
 
-// lalu arahkan ke mana setelah data tersimpan, pake header
-header("location:index.php");
+if ($execute) {
+	// lalu arahkan ke mana setelah data tersimpan, pake header
+	header("location:index.php?notifikasi=1");
+}else{
+	header("location:index.php?notifikasi=0");
+}
