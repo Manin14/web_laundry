@@ -1,5 +1,5 @@
 <?php
-
+$notifikasi = "";
 $c = '';
 //  if (isset($_POST['hitung'])){
 // $a = $_POST['berat'];
@@ -18,9 +18,22 @@ $c = '';
 </head>
 
 <body>
+	<?php
+	if (isset($_GET['notifikasi'])) {
+		$code = $_GET['notifikasi'];
+		switch ($code) {
+			case 1:
+				$notifikasi = "<script>alert('berhasil insert')</script>";
+				break;
 
+			default:
+				$notifikasi = "<script>alert('gagal insert')</script>";
+				break;
+		}
+	}
+	echo $notifikasi;
+	?>
 	<h4> TAMBAH DATA </h4>
-
 	<form method="POST" action="insert.php">
 
 		Nama : <input type="text" name="nama" required="" /> <br>
