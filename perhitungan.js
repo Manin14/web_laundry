@@ -4,3 +4,5 @@ let hasilnya =berat * 6000;
 
 document.getElementById('hasil').value=hasilnya;
 }
+
+

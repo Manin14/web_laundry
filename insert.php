@@ -16,7 +16,14 @@
 
 
 		// lalu arahkan ke mana setelah data tersimpan, pake header
-		header("location:index.php");
+		//header("location:index.php");
+
+		if ($execute) {
+				// lalu arahkan ke mana setelah data tersimpan, pake header
+				header("location:index.php?notifikasi=1");
+			}else{
+				header("location:index.php?notifikasi=0");
+			}
 	
 
 

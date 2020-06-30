@@ -1,26 +1,37 @@
-<?php 	
 
-$c='';
- //  if (isset($_POST['hitung'])){
 
-  	
-	
-	// $a = $_POST['berat'];
+			<?php
+			// dari rifky
+         	$notifikasi = "";  //untuk notif alert
+         
 
-	// $c = $a * 6000; 
- //    echo $c;
-  
- //  }
- ?>
+
+			if (isset($_GET['notifikasi'])) {
+				$code = $_GET['notifikasi'];
+				switch ($code) {
+					case 1:
+						$notifikasi = "<script>alert('Ambigu kayanya')</script>";
+						break;
+
+					default:
+						$notifikasi = "<script>alert('Data berhasil Disimpan')</script>";
+						break;
+				}
+			}
+			echo $notifikasi;
+			?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title> web laundry</title>
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="perhitungan.js" >	</script>
 </head>
 <body>
+           
+
 
 	<h4>  TAMBAH DATA </h4>
   
@@ -29,17 +40,22 @@ $c='';
 	Nama : <input type="text" name="nama"  required="" /> <br>
 	No Telepon : <input type="text" name="no_telp"  required="" /> <br>
 	Alamat : <textarea name="alamat"  required=""> </textarea> <br>
-	Berat : <input type="text" name="berat" id="berat" required="" />
+	Berat : <input type="text" name="berat" id="berat" required="" /> <label>Kg X 6000</label>
 	  <br>
-	Total Bayar : <input type="text"   name="total_bayar" value= "<?php echo $c; ?>" required="" id="hasil" /> 
+	  <button type="button" name="hitung" onclick="xx();" id="hitung" class="hitung"> Hitung </button> <br>
 
-	<button type="submit" class="simpan" name="simpan"> Simpan </button>
+	Total Bayar : <input type="text"   name="total_bayar" required="" id="hasil" placeholder=" Berat X 6000"/> <br>
+
+	 <button type="submit" class="simpan" name="simpan" > Simpan </button> 
 </form>
 
-<button type="button" name="hitung" onclick="xx();"> Hitung </button>
+
+
 <!-- tabel -->
-<hr>	
-<table border="1">
+<hr>
+
+	
+<table border="1" class="scroll">
 	 <thead>	
 	  <tr>	
 	     <th> Nomor </th>
@@ -82,7 +98,7 @@ $c='';
 			     <td><?php echo $person->bayar; 	 ?></td>
 
 
-            <td> <a id="hapus" class="hapus" href="delete.php?id_var=<?php echo $person->id ?>"> Hapus </a> </td>
+            <td> <a id="hapus" class="hapus" href="delete.php?id_var=<?php echo $person->id ?>"  onclick="return confirm('Yakin ingin menghapus data')"> Hapus </a> </td>
             <td> <a class="ubah" href="ubah.php?id_var=<?php echo $person->id ?>"> Ubah </a> </td>
 			  </tr>
 
