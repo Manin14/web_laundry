@@ -9,13 +9,6 @@ $data = $db->prepare($query);
 // lalu eksekusi
 $execute = $data->execute();
 
-<<<<<<< HEAD
-		// persiapkan data dan query nya
-		$data = $db->prepare($query);
-
-		// lalu eksekusi
-		$data->execute();
-
 
 
 		// lalu arahkan ke mana setelah data tersimpan, pake header
@@ -32,11 +25,7 @@ $execute = $data->execute();
 
       
  ?>
-=======
-if ($execute) {
-	// lalu arahkan ke mana setelah data tersimpan, pake header
-	header("location:index.php?notifikasi=1");
-}else{
-	header("location:index.php?notifikasi=0");
-}
->>>>>>> 845bf06b381717ac21db57e6f555538cfd34d6f9
+
+
+
+

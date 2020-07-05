@@ -1,0 +1,13 @@
+h4, h3, h6 {
+	text-align: center;
+	color: blue;
+}
+
+div.diva {
+	margin: auto;
+}
+
+span {
+	margin-left: 40px;
+	color: red;
+}

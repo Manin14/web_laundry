@@ -1,61 +1,82 @@
+ table.kepala {
+  margin: auto;
+  width: 72%;
+  background-color: salmon;
+ }
+div.sss {
+  overflow: scroll;
+  width: 70%;
+  height: 300px;
+  padding: 10px;
+  background: #ccc;
+  margin: auto;
+}
+table.scroll {
+  width: 100%;
 
-  /* h3{
-      text-align:center; }
-   table { 
-      border-collapse:collapse;
-      border-spacing:0;     
-      font-family:Arial, sans-serif;
-      font-size:16px;
-      padding-left:300px;
-      margin:auto; }
-  table th {
-      font-weight:bold;
-      padding:10px;
-      color:#fff;
-      background-color:#2A72BA;
-      border-top:1px black solid;
-      border-bottom:1px black solid;}
-   table td {
-      padding:2px;
-      border-top:1px black solid;
-      border-bottom:1px black solid;
-      text-align:center; }         
-  tr:nth-child(even) {
-     background-color: #DFEBF8; }*/
+}
 
-/*css self*/
-   button.hitung {
-       background-color: lightblue;
-       border-radius: 5px;
-       margin-top: 10px;
-     }
+table.scroll thead {
+  background-color: salmon;
+}
 
-     a.hapus {
-      background-color: red;
-      color: white;
-      border-radius: 5px;
-      padding: 2px;
-      margin: 5px;
-     }
+a.hapus {
+  background-color: red;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  color: white;
 
-     a.ubah {
-         background-color: green;
-        color: white;
-        border-radius: 5px;
-        padding: 2px;
-        margin: 5px;
-     }
+}
 
-    /* buat scroll nya*/
-     table.scroll {
-    width:500px;
+a.ubah {
+  background-color: green;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  color: white;
+  
+}
+
+button.hitung {
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+button.simpan {
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+}
+
+a.cetak {
+  background-color: purple;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+a.cetaksemua {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  z-index: 999;
+  margin-right: 40px;
+}
+/*table.scroll {
+    width:50%;
     border:1px #a9c6c9 solid;
+    margin: auto;
   }
-
   table.scroll thead {
-    display:table;
-    width:100px;
-    background-color: blue;
+    display:block;
+    width:100%;
+    background-color: salmon;
   }
   table.scroll tbody {
     display:block;
@@ -70,5 +91,33 @@
   }
   table.scroll th, td {
     width:33%;
-   padding:8px;
-  }
+    padding:8px;
+  }*/
+  /*.fixed_header{
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 400px;
+}
+
+.fixed_header thead tr {
+   display: block;
+}
+
+.fixed_header thead {
+  background: black;
+  color:#fff;
+}*/
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: left;
+  width: 500px;
+}

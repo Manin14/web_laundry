@@ -1,0 +1,21 @@
+body {
+	font-family: arial;
+}
+
+/*tabel nya jadi belang*/
+/*baris genap warna nya beda*/
+tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+h1, h3, p {
+	text-align: center;
+	color: blue;
+}
+table.kepala {
+	margin: auto;
+}
+table thead tr {
+   background-color: salmon;
+   font-size: 40px;
+}
