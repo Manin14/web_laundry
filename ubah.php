@@ -16,6 +16,7 @@
  <html>
  <head>
  	<title>	UBAH DATA </title>
+ 	<script type="text/javascript" src="perhitungan.js" >	</script>
  	<style type="">
  		
  		button {
@@ -38,20 +39,15 @@
 			Nama : <input type="text" name="nama" value="<?php echo $person->nama?>" /> <br>
 			No Telpon : <input type="text" name="no_telp" value="<?php echo $person->notelp?>" /> <br>
 			Alamat : <textarea name="alamat"> <?php echo $person->alamat?> </textarea> <br>
-			Berat : <input type="text" name="berat" value="<?php echo $person->berat?>" /> <br>
-			Total Bayar : <input type="text" name="total_bayar" value="<?php echo $person->bayar?>" /> <br>
+			Berat : <input type="text" name="berat" id="berat" value="<?php echo $person->berat?>" />  <label>Kg X 6000</label> <br>
+			 <button type="button" name="hitung" onclick="xx();" id="hitung" class="hitung"> Hitung </button> <br>
+			Total Bayar : <input type="text" name="total_bayar" id="hasil" value="<?php echo $person->bayar?>" /> <br>
 
 			<button type="submit" class="ubah"> Ubah Data </button>
 		</form>
 
 
-		<script type="">
-			 const p5 = document.querySelector(".ubah");
-	          p5.addEventListener("click", function () {
-	             alert("Data Berhasil Diubah");
-	            });
-		</script>
-		 
+		
  </body>
  </html>
 

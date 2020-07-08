@@ -1,9 +1,20 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
-	// ketika ketik seuatu di keyword
-	$('#keyword').on('keyup', function() {
+  
+  
+   $('#cari').on('keyup', function(){ //buat event ketika keyword ditulis
       
-       $('#container').load('index.php?keyword=' + $('#keyword').val());
-	});
+
+      //ajax menggunakan load
+       //$('#container').load('ajax/mahasiswa.php?keyword=' + $('#keyword').val());
+
+       //ajax menggunakan get
+       $.get('ajax/load.php?cari=' + $('#cari').val(), function(data) {
+         $('#container').html(data);
+        
+
+      });
+
+   });
 
 });

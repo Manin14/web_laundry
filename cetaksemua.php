@@ -1,6 +1,6 @@
 <?php 	
 include "database.php"; //ambil file database
-$query = "SELECT * FROM transaksi ";
+$query = "SELECT * FROM transaksi ORDER BY id DESC";
 $data = $db->prepare($query);
 
 $data->execute();

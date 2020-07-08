@@ -1,44 +1,5 @@
 
 
-			<?php
-			// dari rifky
-         	$notifikasi = "";  //untuk notif alert
-         
-
-
-			if (isset($_GET['notifikasi'])) {
-				$code = $_GET['notifikasi'];
-				switch ($code) {
-					case 1:
-						$notifikasi = "<script>alert('Data berhasil disimpan')</script>";
-						break;
-
-					default:
-						$notifikasi = "<script>alert('Data gagal Disimpan')</script>";
-						break;
-				}
-			}
-			echo $notifikasi;
-
-			// alert hapus
-			$notif = "";  //untuk notif alert
-         
-
-
-			if (isset($_GET['notif'])) {
-				$code = $_GET['notif'];
-				switch ($code) {
-					case 1:
-						$notif = "<script>alert('Data gagal dihapus')</script>";
-						break;
-
-					default:
-						$notif = "<script>alert('Data berhasil Dihapus')</script>";
-						break;
-				}
-			}
-			echo $notif;
-			?>
 
 <!DOCTYPE html>
 <html>
@@ -81,29 +42,15 @@
 <!-- tabel -->
 <hr>
   <a class="cetaksemua" href="cetaksemua.php" target="_blank"> Cetak Semua Data</a>
-  <input type="text" name="cari2" id="keyword" placeholder=" Cari Data : Masukan Nama atau No telpon" style="width:300px;"> 
+  <br> <br>
 
 	  <!-- cari dari gthub -->
-	<form action="" method="post">
-		<input type="text" name="keyword" size="40" autofocus="" placeholder="Masukan nama , no telp" autocomplete="off">
-		<button type="submit" > Cari </button>
-
-		
+	<form action="" method="post" id="form_cari">
+		<input type="text" name="cari" size="40" autofocus="" placeholder="Cari : Masukan nama atau no telp" autocomplete="off" id="cari">
+				
 	</form>
 
-	<?php 
-	include "database.php";
-
-	$query = "SELECT * FROM transaksi WHERE nama LIKE '$_POST[keyword]%' ";
-
-	$data = $db->prepare($query);
-	$data->execute();
-
-    $person = $data->fetch(PDO::FETCH_OBJ);
-
-
-
-	 ?>
+	
 
   <hr>	
 

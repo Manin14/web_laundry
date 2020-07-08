@@ -4,13 +4,23 @@ include "database.php";
 $query = "DELETE FROM transaksi WHERE id='$_GET[id_var]' ";
 $data = $db->prepare($query);
 
-$data->execute();
+$execute = $data->execute();
 
- 	if ($execute) {
-				// lalu arahkan ke mana setelah data tersimpan, pake header
-				header("location:index.php?notif=1");
+ 	if ($execute == true) {
+ 		    echo "
+                    <script> 
+                            alert('Data Berhasil Dihapus');
+                            document.location.href = 'index.php';
+                    </script>
+        	     ";
+			
 			}else{
-				header("location:index.php?notif=0");
+				echo " <script> 
+                            alert('Data Gagal Dihapus');
+                            document.location.href = 'index.php';
+                    </script>
+                  ";
+				
 			}
 
 
